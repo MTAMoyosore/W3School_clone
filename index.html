@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://kit.fontawesome.com/dd9cbd17b1.js" crossorigin="anonymous"></script>
+	<title>W3Schools Online Web Tutorials</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: sans-serif;
+
+		}
+		nav {
+			width: 100%;
+			background: white;
+			overflow: auto;
+			position: fixed;
+			height: 40px;
+
+		}
+		ul {
+			padding: 0;
+			margin: 0 0 0 30px;
+			list-style: none;
+		}
+		li {
+			float: left;
+			display: inline-block;
+			position: relative;
+		}
+		.logo img {
+			position: fixed;
+			width: 45px;
+			height: 40px;
+			z-index: 2;
+		}
+		.logo2 {
+			position: fixed;
+			width: 45px;
+			height: 38px;
+			z-index: 5;
+		}
+		nav a {
+			width: 100%;
+			display: inline-block;
+			padding: 10px 10px;
+			text-decoration: none;
+			font-family: sans-serif;
+			color: white;
+			text-align: center;
+		}
+		ul li a {
+			display: inline-block;
+			padding: 10px 10px;
+			color: black;
+			text-decoration: none;
+			text-align: center;
+			font size: 10px;
+			color: white;
+		}
+		nav ul li a:hover{
+			background: #04AA6D;
+			width: 100%;
+			height: 20px;
+		}
+		ul li a:hover {
+			background: black;
+			color: white!important;
+		}
+		#subnav  {
+			position: fixed;
+    		background-color: #282A35;
+    		color: white !important
+    		padding-top: 10px;
+    		letter-spacing: 1px;
+    		font-family: sans-serif;
+    		font-size: 12px;
+    		top: 40px;
+    		z-index: 0;
+    		width: 100%;
+    		white-space:  nowrap;
+    		overflow: auto;
+    		scrollbar-width: none;
+    		margin-left: 0!important;
+    	}
+		.ltc1 {
+			font-size: 50px;
+			font-weight: 700;
+			text-align: center;
+			display: block;
+			margin-top: 0px;
+			padding-top: 70px;
+		}
+		.ltc2 {
+			font-size:21px ;
+			font-weight:700 ;
+			color: #fff4a3;
+			margin-top: 30px;
+			text-align: center;
+		}
+		.ltc3 {
+			color: white;
+			font-size: 23px;
+			font-weight: 700;
+			margin-top: 30px;
+			text-align: center;
+		}
+		.html1 {
+			font-weight: 700;
+			font-size: 50px;
+			margin-top: -18px;
+			text-align: center;
+		}
+		.html2 {
+			font-size: 19px;
+			color: black ;
+			text-align: center;
+			margin-top: 5px;
+		}
+		.css1 {
+			font-size: 50px ;
+			font-weight: 700;
+			margin-top: ;
+			text-align: center ;
+		}
+		.button {
+			border: none;
+			color: white;
+			padding: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 18px;
+			margin: 10px 2px;
+			cursor: pointer;
+			border-radius: 25px;
+			width: 200px;
+			opacity: 1;
+  			transition: 0.3s;
+		}
+		.button:hover {opacity: 0.8}
+		.but {
+			border: none;
+			margin: 20px 40px;
+			width: 35%;
+			padding: 2% 3%;
+			z-index: 3;
+			border-radius: 5px;
+			text-align: center;
+			display: inline-block;
+			opacity: 1;
+  			transition: 0.3s;
+		}
+		.but:hover {opacity: 0.8}
+		.button2 {
+			border: none;
+			color: black;
+			padding: 36px 24px;
+			text-align: center;
+			text-decoration: none;
+			display:inline-block !important;
+			font-size: 30px;
+			font-weight: 500;
+			margin: 5px 20px;
+			width: 500px;
+			border-radius: 5px;
+			opacity: 1;
+  			transition: 0.3s;
+		}
+		.button2:hover {opacity: 0,8}
+		.button3 {
+			border: none;
+			color: black;
+			padding: 2% 3%;
+			text-align: center;
+			text-decoration: none;
+			display:block;
+			font-size: 30px;
+			font-weight: 500;
+			margin: 10px 2px;
+			width: 49%;
+			border-radius: 5px;
+			opacity: 1;
+  			transition: 0.3s;
+		}
+		.button3:hover {opacity: 0.8}
+		.button4 {
+			border: none;
+			color: black;
+			padding: 24px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 30px;
+			font-weight: 500;
+			margin: 10px 20px;
+			width: 250px;
+			height: 100px;
+			border-radius: 5px !important;
+			opacity: 1;
+  			transition: 0.3s;
+		}
+		.button4:hover {opacity: 0.8}
+		.button5 {
+			font-size: 18px;
+			border: none;
+			padding: 6px 18px;
+			overflow: hidden;
+			border-radius: 5px;
+			margin:5px 160px 5px 160px ;
+			text-decoration: none;
+			opacity: 1;
+  			transition: 0.3s;
+		}
+		.button5:hover {opacity: 0.8}
+		.be {   
+			font-weight: 700;
+    		font-size: 45px;
+	    	line-height: 55px;
+	    	padding-top: 80px;
+    		padding-bottom: 10px;
+    		font-family: Source Sans Pro;
+    		color: #fff;
+    		margin: 0;
+
+    	}
+    	.button6 {
+			border: none;
+			color: black;
+			padding: 24px 50px 24px 50px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 30px;
+			font-weight: 500;
+			margin: 10px 40px;
+			width: 400px;
+			height: 150px;
+			border-radius: 5px !important;
+			opacity: 1;
+  			transition: 0.3s;
+		}
+		.button6:hover {opacity: 0.8}
+		.parent{
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			text-align: center,;
+			margin: 0 0 0px 0;
+			padding: 20px 30px;
+		}
+		.se {
+		    padding: 10px;
+    		font-size: 17px;
+    		border: 1px solid #282A35;
+    		border-radius: 25px;
+    		float: left;
+    		width: 40%;
+    		padding-left: 25px;
+    		background: white;
+    		border-top-right-radius: 0;
+    		border-bottom-right-radius: 0;
+    		border-right: 0;
+    		border-right: 1px solid #04AA6D;
+    		outline: 0;
+		}
+		.s1 {
+		    padding: 10px;
+    		font-size: 17px;
+    		border: 1px solid #282A35;
+    		border-radius: 25px;
+    		float: left;
+    		width: 8%;
+    		padding-left: 25px;
+    		background: white;
+    		height: 6px;
+    		outline: 0;
+    		margin-top: 5px;
+		}
+		  .ie { 
+		  	border-radius: 25px;
+    		float: left;
+    		width: 5%;
+    		padding: 10px;
+    		background: #04AA6D;
+    		color: white;
+    		font-size: 17px;
+    		border: 1px solid #282A35;
+    		border-left: none;
+    		cursor: pointer;
+    		border-top-left-radius: 0;
+    		border-bottom-left-radius: 0;
+    	}
+    	.topic {
+    		align-content: end;
+    		justify-content: end;
+    	}
+    	.button7 {
+			border: none;
+			border-color: black;
+			color: white;
+			padding: 0px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 10px;
+			margin: 1px 2px;
+			cursor: pointer;
+			border-radius: 30px;
+			width: 120px;
+			height: 25px;
+		}
+		.button7:hover {background-color: #e7e7e7;}
+		.button8 {
+			border: none;
+			border-color: black;
+			color: white;
+			padding: 0px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 10px;
+			margin: 1px 2px;
+			cursor: pointer;
+			border-radius: 30px;
+			width: 120px;
+			height: 25px;	
+		}
+		.button8:hover {background-color: #e7e7e7;}
+		.button9 {
+			border: none;
+			border-color: black;
+			color: white;
+			padding: 0px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 10px;
+			margin: 1px 2px;
+			cursor: pointer;
+			border-radius: 30px;
+			width: 120px;
+			height: 25px;
+		}
+		.button9:hover {background-color: #e7e7e7;}
+		.si {
+		    padding: 10px;
+    		font-size: 17px;
+    		border: 1px solid #282A35;
+    		border-radius: 25px;
+    		float: left;
+    		width: 16%;
+    		padding-left: 10px;
+    		background: white;
+    		borde1pxr-top-right-radius: 0;
+    		border-bottom-right-radius: 0;
+    		border-right: 0;
+    		border-right: 1px solid #04AA6D;
+    		outline: 0;
+		}
+		.button7:hover{
+			border: black;
+			background-color: grey;
+		}
+		  .ii { 
+		  	border-radius: 25px;
+    		float: left;
+    		width: 7px;
+    		padding: 15px;
+    		background: #grey;
+    		color: white;
+    		font-size: 17px;
+    		border: 1px solid #282A35;
+    		border-left: none;
+    		cursor: pointer;
+    		border-top-left-radius: 20px;
+    		border-bottom-left-radius: 20px;
+    		height: 7px;
+    		margin-top: ;
+    	}
+    	icon {
+    		justify-items: left;
+    	} 
+    	
+	</style>
+</head>
+<body>
+<div>
+	<div class="logo img">
+		<a href="https://www.w3schools.com/"><img src="w3 logo.png" alt="w3 logo"></a> 
+	</div>
+	<nav style="color:black;">
+		<ul>
+			<li><a href="#Tutorials U+02193" style="color:black;">Tutorials <i class="fa-solid fa-caret-down fa-2xs"></i></a></li>
+			<li><a href="#Exercise" style="color:black;">Exercise <i class="fa-solid fa-caret-down fa-2xs"></i></a><li>
+			<li><a href="#Service" style="color:black;">Service <i class="fa-solid fa-caret-down fa-2xs"></i></a></li>
+			<form><i><input style="margin-left:100px" class="s1" type="text" name="search" placeholder="search..."></form>
+			
+		<div style="margin-left: 800px;">
+			<i class="fa-solid fa-circle-half-stroke fa-rotate-180"></i>
+			
+			<button class="button7" style="margin-top: 8px;"><a href="https://my-learning.w3schools.com/" style="color:black;">Spaces</a></button>
+			<button class="button8" style="margin-top: 8px;"><a href="https://my-learning.w3schools.com/" style="color:black;"><i class="fa-regular fa-cart-shopping" style="color:purple;"></i>  Get Certified</a></button>
+			<button class="button9" style="margin-top: 8px;"><a href="https://my-learning.w3schools.com/" style="color:black;">My W3Schools</a></button>
+			<i class="fa-solid fa-user" style="color:darkgreen;"></i>
+		</div>
+	</div>
+		</ul>
+	</nav>
+	
+
+</div>
+<div style="background-color: black; padding-top: 65px;">
+	<div>	
+	<div id="subnav">
+		<ul>
+			<li><a href="https://www.w3schools.com/html/default.asp" s>HTML</a></li>
+			<li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+			<li><a href="https://www.w3schools.com/js/default.asp">JAVASCRPT</a></li>
+			<li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+			<li><a href="https://www.w3schools.com/python/default.asp">PYTHON</a></li>
+			<li><a href="https://www.w3schools.com/java/default.asp">JAVA</a></li>
+			<li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+			<li><a href="https://www.w3schools.com/howto/default.asp">HOW TO</a></li>
+			<li><a href="https://www.w3schools.com/w3css/default.asp">W3.CSS</li>
+			<li><a href="https://www.w3schools.com/c/index.php">C</a></li>
+			<li><a href="https://www.w3schools.com/cpp/default.asp">C++</a></li>
+			<li><a href="https://www.w3schools.com/cs/index.php">C#</a></li>
+			<li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp"> BOOTSTRAP</a></li>
+			<li><a href="https://www.w3schools.com/react/default.asp">REACT</a></li>
+			<li><a href="https://www.w3schools.com/mysql/default.asp">MYSQL</a></li>
+			<li><a href="https://www.w3schools.com/jquery/default.asp">JQUERY</a></li>
+			<li><a href="https://www.w3schools.com/excel/index.php">EXCEL</a></li>
+			<li><a href="https://www.w3schools.com/xml/default.asp">XML</a></li>
+			<li><a href="https://www.w3schools.com/django/index.php">DJANGO</a></li>
+		</ul>
+	</div>
+</div>
+	<div style="padding-bottom:50px;background-color: #282A35;" >
+		<h1 class="ltc1" style="color: white;font-size: 60px;">Learn to Code</h1>
+		<h3 class="ltc2">With the world's largest web developer site.</h3><br>
+		<div style="margin-left:430px ;">
+		<form><input class="se" type="text" name="search" placeholder="search for tutorias, e.g HTML"><button class="ie" type="button" id="learntocode_searchbtn" onclick="click_learntocode_search_btn()" style="color:white;"><i id="learntocode_searchicon" class="fa fa-search ga-fp"></i></button></button></form></div>
+		<br>
+		<br>
+		<h4 class="ltc3"><u><a href="https://www.w3schools.com/where_to_start.asp" style="color: white;"> Not Sure Where To Begin?</a></u></h4>
+	</div>
+<div class="parent" style="background-color: #D9EEE1;padding: 65px 0;">
+	<div style="text-align:center;">
+	<h1 class="html1">HTML</h1>
+	<h4 class="html2">The language for building web pages</h4>
+	<button style="background-color: #04AA6D;" class="button">Learn HTML</button><br>
+	<button style="background-color: #FFF4A3; color: black" class="button">Video Tutorial</button><br>
+	<button style="background-color:#000; " class="button">HTML Reference</button><br>
+	<button style="background-color:#FFC0C7; color: black;" class="button">Get Certified</button><br>
+	</div>
+	<div>
+		<div>
+			<div style="background-color:#E7E9EB;padding: 2%;width: 400px;height: 310px; margin-left: 60px;border-radius: 5px;">
+				<div>
+					<h3 style="font-size: 20px">HTML Example:</h3>
+				</div>
+				<div style="background-color:#fff;padding: 10px 12px;height:180px;font-size: 13px;border-left: 6px solid green;" >
+					<span style="color:blue;"><</span><span style="color:brown;">!DOCTYPE </span><span style="color:red">html</span>
+					<span style="color:blue;">></span><br>
+					<span style="color:blue;"><</span><span style="color:brown;">html</span><span style="color:blue;">></span><br>
+					<span style="color:blue;"><</span><span style="color:brown;">head</span><span style="color:blue;">></span><br>
+					<span style="color:blue;"><</span><span style="color:brown;">title</span><span style="color:blue;">></span>HTML Tutorial<span style="color:blue;"><</span><span style="color:brown;">title</span><span style="color:blue;">></span><br>
+					<span style="color:blue;"><</span><span style="color:brown;">/head</span><span style="color:blue;">></span><br>
+					<br>
+					<span style="color:blue;"><</span><span style="color:brown;">body</span><span style="color:blue;">></span><br>
+					<span style="color:blue;"><</span><span style="color:brown;">h1</span><span style="color:blue;">></span>This is a heading<span style="color:blue;"><</span><span style="color:brown;">h1</span><span style="color:blue;">></span><br>
+					<span style="color:blue;"><</span><span style="color:brown;">p</span><span style="color:blue;">></span>This is a paragraph.<span style="color:blue;"><</span><span style="color:brown;">/p</span><span style="color:blue;">></span><br>
+					<br>
+					<span style="color:blue;"><</span><span style="color:brown;">/body</span><span style="color:blue;">></span><br>
+					<span style="color:blue;"><</span><span style="color:brown;">/html</span><span style="color:blue;">></span>
+				</div>
+				<div>
+					<button style="background-color:#04AA6D;" class="button">Try it Yourself</button>
+				</div>
+			</div>
+		</div>
+				
+	</div>
+</div>
+<div class="parent" style="background-color: #FFF4A3;padding: 65px 0;">
+	<div style="text-align: center;">
+	<h1 class="css1">CSS</h1>
+	<h4 class="html2">The language for styling web pages</h4>
+	
+	<button style="background-color:#04AA6D;" class="button">Learn CSS</button><br>
+	<button style="background-color: #282A35;" class="button">CSS Reference</button><br>
+	<button style="background-color: #FFC0C7" class="button">Get Certified</button><br>
+	
+	</div>
+	<div style="background-color:#E7E9EB;padding: 2%;width: 400px;height: 310px; margin-left: 60px;border-radius: 5px;">
+		<div> 
+			<h3 style="font-size: 20px">CSS Example:</h3>
+		</div>
+			<div style="background-color:#fff;padding: 10px 12px;height:180px;font-size: 13px;border-left: 6px solid green;">
+			<span style="color:brown;">body </span><span>{</span><br>
+			<span>&nbsp;&nbsp;<span style="color:red;">background-color</span><span>: </span><span style="color:blue;">lightblue</span><span>;</span><br>
+			<span>}</span>
+			<br>
+			<span style="color:brown;">h1 </span><span>{</span><br>
+			<span style="color:red;">&nbsp;&nbsp;color</span>:<span style="color:blue;"> white</span><spam>;</span><br>
+			<span style="color:red;">&nbsp;&nbsp;text-align</span>:<span style="color:blue;">center</span><span>;</span><br>
+			<span>}</span>
+			<br>
+			<span style="color:brown;">p </span>{</span><br>
+			<span style="color:red;">&nbsp;&nbsp;font-family</span>: <span style="color:blue;">verdana</span><span>;</span><br>
+			<span>}</span>
+		</div>
+		<div>
+			<button style="background-color:#04AA6D;" class="button">Try it Yourself</button>
+		</div>
+	</div>
+</div>
+<div class="parent" style="background-color: #282A35; padding: 65px 0;">
+	<div style="text-align:center;">
+		<h1 class="css1" style="color: white;">Java Script</h1>
+		<h4 class="html2" style="color: white">The language for programming web pages</h4>
+		<button style="background-color:#04AA6D;" class="button">Learn JavaScript</button><br>
+		<button style="background-color: white; color: black;" class="button">JavaScript Reference</button><br>
+		<button style="background-color: #FFC0C7; color: black;" class="button">Get Certified</button><br>
+	</div>
+	<div style="background-color:#E7E9EB;padding: 2%;width: 400px;height: 310px; margin-left: 60px;border-radius: 5px;">
+		<div>
+			<h3 style="font-size: 20px">JavaScript Example:</h3>
+		</div>
+		<div style="background-color:#fff;padding: 10px 12px;height:180px;font-size: 13px;border-left: 6px solid green;">
+			<span style="color:blue;"><</span><span style="color:brown;">button </span><span style="color:red;">onclick</span><span style="color:blue;">="myFunction()"></span>Click Me!<span style="color:blue;"><</span><span style="color:brown;">/button</span><span style="color:blue;">></span><br><br>
+			<span style="color:blue;"><</span><span style="color:brown;">script</span><span style="color:blue;">></span><br>
+			<span style="color:blue;">function</span><span>myFunction() {</span><br>
+			<span style="color:blue;">&nbsp;&nbsp;let </span>x = document.getElementById(<span style="color:brown;">"demo"</span>);</span><br>
+			<span>&nbsp;&nbsp;x.style.fontSize = <span style="color:brown;">"25px"</span>;</span><br>
+			<span>&nbsp;&nbsp;x.style.color = <span style="color:brown;">"red"</span>;</span><br>
+			<span>}</span><br>
+			<span style="color:blue;"><</span><span style="color:brown;">/script</span><span style="color:blue;">></span>
+			<span></span>
+		</div>
+		<div>
+			<button style="background-color:#04AA6D" class="button">Try it Yourself</button>
+		</div>
+	</div>
+</div>
+<div class="parent"style="background-color: #F3ECEA; padding:70px 0;">
+	<div style="text-align:center;">
+		<h1 class="css1">Python</h1>
+		<h4 class="html2">A popular programming language</h4>
+		<button style="background-color: #04AA6D;" class="button">Learn Python</button><br>
+		<button style="background-color: #282A35" class="button">Python Reference</button><br>
+		<button style="background-color: #FFC0C7;color: black;" class="button">Get Certified</button><br>
+	</div>
+	<div style="background-color:#E7E9EB;padding: 2%;width: 400px;height: 310px; margin-left: 60px;border-radius: 5px;">
+		<div>
+			<h3 style="font-size: 20px">Python Example:</h>
+		</div>
+		<div style="background-color:#fff;padding: 10px 12px;height:180px;font-size: 13px;border-left: 6px solid green;">
+			<span style="color:blue">if</span><span style="color:red;"> 5 </span> > <span style="color:red;">2:</span><br>
+			<span>&nbsp;&nbsp;print("Five is greater than two!")</span>
+		</div>
+		<div>
+			<button style="background-color:#04AA6D;" class="button">Try it Yourself</button>
+		</div>
+	</div>
+</div >
+<div class="parent" style="background-color: #96D4D4; padding:65px 100px;">
+	<div style="text-align: center;">
+		<h1 class="css1">SQL</h1>
+		<h4 class="html2">A language for accessing databases</h4>
+		<button style="background-color: #04AA6D;" class="button">Learn SQL</button><br>
+		<button style="background-color: black;" class="button">SQL Reference</button><br>
+		<button style="background-color:#FFC0C7;color: black;" class="button">Get Certified</button><br>	
+	</div>
+	<div style="background-color:#E7E9EB;padding: 2%;width: 400px;height: 310px; margin-left: 60px;border-radius: 5px;">
+		<div >
+			<h3 style="font-size: 20px;">SQL Example:</h3>
+		</div>
+		<div style="background-color:#fff;padding: 10px 12px;height:180px;font-size: 13px;border-left: 6px solid green;">
+			<b><span style="color:blue;">SELECT </span> * <span style="color:blue;"> FROM</span> Customers</span><br>
+			<span style="color:blue;">WHERE</span> Country=<span style="color:red;">'Mexico'</span>;</b>
+		</div>
+		<div>
+			<button style="background-color: #04AA6D;" class="button">Try it Yourself</button>
+		</div>
+	</div>	
+</div>
+</div>
+<div style="text-align:center; background-color: #282A35;padding: 65px 0;" >
+	<div class="but" style="background-color: #FFC0C7;">
+		<h1>PHP</h1>
+		<h4>A web server proramming language</h4>
+		<button style="background-color: black;" class="button">Learn PHP</button>
+	</div>
+	<div class="but" style="background-color:#FFF4A3;";>
+		<h1>jQuery</h1>
+		<h4>A JS library for developing web pages</h4>
+		<button style="background-color:black;" class="button">Learn jQuery</button>
+	</div>
+	<div class="but" style="background-color:#F3ECEA">
+		<h1>Java</h1>
+		<h4>A proramming language</h4>
+		<button style="background-color:black;" class="button">Learn Java</button>
+	</div>
+	<div class="but" style="background-color:#D9EEE1">
+		<h1>C++</h1>
+		<h4>A programming language</h4>
+		<button style="background-color:black;" class="button">Learn C++</button>
+	</div>
+	<div class="but" style="background-color:#96D4D4">
+		<h1>W3.CSS</h1>
+		<h4>A CSS framework for faster ad better responsive web pages</h4>
+		<button style="background-color:black;" class="button">Learn W3.CSS</button>
+	</div>
+	<div class="but" style="background-color:#E7E9EB">
+		<h1>Bootstrap</h1>
+		<h4>A CSS framework for designing better web pages</h4>
+		<button style="background-color:black;" class="button ">Learn Bootstrap</button>
+	</div>
+
+	<br>
+	<div >
+		<button class="button2" style="background-color: #FFC0C7;"><a href="https://www.w3schools.com/c/index.php" style="color:black;text-decoration: none;">C</a></button>
+	</div><br>
+	<div>
+		<button class="button2" style="background-color: #FFF4A3"><a href="https://www.w3schools.com/cs/index.php" style="color:black;text-decoration: none;">C#</a></button>
+	</div><br>
+	<div>
+	<button class="button4" style="background-color: #F3ECEA;"><a href="https://www.w3schools.com/r/default.asp" style="color:black;text-decoration: none;">R</a></button>
+	<button class="button4" style="background-color: #D9EEE1;"><a href="https://www.w3schools.com/kotlin/index.php"style="color:black;text-decoration: none;">Kotlin</button>
+	<button class="button4" style="background-color: #96D4D4;"><a href="https://www.w3schools.com/nodejs/default.asp"style="color:black;text-decoration: none;">Node js</a></button>
+	<button class="button4" style="background-color:#FFC0C7 ;"><a href="https://www.w3schools.com/react/default.asp"style="color:black;text-decoration: none;">React</a></button>
+	<button class="button4" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/js/js_json.asp"style="color:black;text-decoration: none;">JSON</a></button>
+	<button class="button4" style="background-color:#F3ECEA ;"><a href="https://www.w3schools.com/vue/index.php"style="color:black;text-decoration: none;">Vue</button>
+	<button class="button4" style="background-color: #D9EEE1;"><a href="https://www.w3schools.com/mysql/default.asp"style="color:black;text-decoration: none;">MySQL</a></button>
+	<button class="button4" style="background-color: #96D4D4;"><a href="https://www.w3schools.com/xml/default.asp"style="color:black;text-decoration: none;">XML</button>
+	<button class="button4" style="background-color: #FFC0C7;"><a href="https://www.w3schools.com/sass/default.php"style="color:black;text-decoration: none;">Sass</a></button>
+	<button class="button4" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/icons/default.asp"style="color:black;text-decoration: none;">Icons</a></button>
+	<button class="button4" style="background-color:#F3ECEA;"><a href="https://www.w3schools.com/css/css_rwd_intro.asp"style="color:black;text-decoration: none;">RWD</a></button>
+	<button class="button4" style="background-color: #D9EEE1;"><a href="https://www.w3schools.com/graphics/default.asp"style="color:black;text-decoration: none;">Graphics</a></button>
+	<button class="button4" style="background-color: #96D4D4;"><a href="https://www.w3schools.com/graphics/svg_intro.asp"style="color:black;text-decoration: none;">SVG</a></button>
+	<button class="button4" style="background-color: #FFC0C7;"><a href="https://www.w3schools.com/graphics/canvas_intro.asp"style="color:black;text-decoration: none;">Canvas</a></button>
+	<button class="button4" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/nodejs/nodejs_raspberrypi.asp"style="color:black;text-decoration: none;">Raspberry Pi</a></button>
+	<button class="button4" style="background-color: #F3ECEA;"><a href="https://www.w3schools.com/cybersecurity/index.php"style="color:black;text-decoration: none;">Cyber Security</a></button>
+	<button class="button4" style="background-color: #D9EEE1;"><a href="https://www.w3schools.com/colors/default.asp"style="color:black;text-decoration: none;">Colors</a></button>
+	<button class="button4" style="background-color: #96D4D4;"><a href="https://www.w3schools.com/git/default.asp"style="color:black;text-decoration: none;">Git</a></button>
+	<button class="button4" style="background-color:#FFC0C7 ;"><a href="https://www.w3schools.com/python/matplotlib_intro.asp"style="color:black;text-decoration: none;">Matplotlib</a></button>
+	<button class="button4" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/python/numpy/default.asp"style="color:black;text-decoration: none;">NumPy</a></button>
+	<button class="button4" style="background-color: #F3ECEA;"><a href="https://www.w3schools.com/python/pandas/default.asp"style="color:black;text-decoration: none;">Pandas</a></button>
+	<button class="button4" style="background-color: #D9EEE1;"><a href="https://www.w3schools.com/python/scipy/index.php"style="color:black;text-decoration: none;">SciPy</a></button>
+	<button class="button4" style="background-color: #96D4D4;"><a href="https://www.w3schools.com/asp/default.asp"style="color:black;text-decoration: none;">ASP</a></button>
+	<button class="button4" style="background-color: #FFC0C7;"><a href="https://www.w3schools.com/angular/default.asp"style="color:black;text-decoration: none;">AngularJS</a></button>
+	<button class="button4" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/appml/default.asp"style="color:black;text-decoration: none;">AppML</a></button>
+	<button class="button4" style="background-color: #F3ECEA;"><a href="https://www.w3schools.com/go/index.php"style="color:black;text-decoration: none;">Go</a></button>
+	<button class="button4" style="background-color: #D9EEE1;"><a href="https://www.w3schools.com/typescript/index.php"style="color:black;text-decoration: none;">TypeScript</a></button>
+	<button class="button4" style="background-color: #96D4D4;"><a href="https://www.w3schools.com/django/index.php"style="color:black;text-decoration: none;">Django</a></button>
+	<button class="button4" style="background-color: #FFC0C7;"><a href="https://www.w3schools.com/mongodb/index.php"style="color:black;text-decoration: none;">MongoDB</a></button>
+	<button class="button4" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/statistics/index.php"style="color:black;text-decoration: none;">Statistics</a></button>
+	<button class="button4" style="background-color: #F3ECEA;"><a href="https://www.w3schools.com/datascience/default.asp"style="color:black;text-decoration: none;">Data Science</a></button>
+	<button class="button4" style="background-color: #D9EEE1;"><a href="https://www.w3schools.com/typingspeed/default.asp"style="color:black;text-decoration: none;">Typing Speed</a></button>
+	<button class="button4" style="background-color: #96D4D4;"><a href="https://www.w3schools.com/howto/default.asp"style="color:black;text-decoration: none;">HowTo</a></button>
+	<button class="button4" style="background-color: #FFC0C7;"><a href="https://www.w3schools.com/codegame/index.html"style="color:black;text-decoration: none;">Code Game</a></button>
+	<button class="button4" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/spaces/index.php" style="color:black;text-decoration: none;">Spaces</a></button>
+	<button class="button4" style="background-color: #F3ECEA;"><a href="https://www.w3schools.com/postgresql/index.php" style="color:black;text-decoration: none;">PostgreSQL</a></button>
+	</div>
+	<div>
+	<button class="button2"  style="background-color:#96D4D4"><a href="https://www.w3schools.com/excel/index.php" style="color:black;text-decoration: none;">Excel</a></button>
+	<button class="button2" style="background-color:#FFF4A3"><a href="https://www.w3schools.com/googlesheets/index.php" style="color:black;text-decoration: none;">Google Sheets</a></button>
+	<button class="button2" style="background-color:#FFC0C7"><a href="https://www.w3schools.com/python/python_ml_getting_started.asp" style="color:black;text-decoration: none;">Machine Learning</a></button>
+	<button class="button2" style="background-color: #F3ECEA;"><a href="https://www.w3schools.com/ai/default.asp" style="color:black;text-decoration: none;">Artificial Intelligence</a></button>
+	</div>
+	<div style="text-align: center;">
+	<h1 style="color: white; padding-top: 70px ; font-size: 55px; font-weight: 700; text-align: center;">Code Editor</h1>
+	<h4 style="text-align: center; color: white;">With our online code editor, you can edit code and view the result in your browser</h4><br>
+	<img src="codeeditor.gif" alt="codeeditor" style="text-align: center;width: 800px;height:300px;"><br>
+    </div>
+	<div>
+	<button class="button5" style="background-color: #04AA6D; margin-left: 160px!important; margin-left: 100px;"><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello" style="color:white; text-decoration: none;">Try Frontend Editor (HTML/CSS/JS)</a></button><br>
+	<button class="button5" style="background-color: #FFF4A3;"><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_python" style="text-align:left; color: black; text-decoration: none;">Try Backend Editor (Python/PHP/Java/C..)</a></button>
+	<br>
+	</div>
+
+	<h1 style="color: white; padding-top: 70px ; font-size: 55px; font-weight: 700; text-align: center;">W3Schoools Spaces</h1>
+	<h3 style="color: white;">If you want to create your own website, check out <a href="https://www.w3schools.com/spaces/index.php" style="color:#FFC0C7">W3Schools Spaces.</a></h3>
+	<h3 style="color: white;">It is free to use, and does not require any setup:</h3><br>
+	<img src="dynamicspaces.GIF" alt="dynamicspaces" style="padding: 40px;"><br>
+	<img src="how-spaces-works3.png" alt="how-spaces-works3" style="padding:40px;width: 900px;"><br>
+	<button class="button" style="background-color:#04AA6D; color: white;">Learn More</button>
+	</div>
+</div>	
+	<div style="background-color: #D9EEE1; padding:50px; text-align: center;">
+	<h1 style="color: black; padding-top: 10px ; font-size: 55px; font-weight: 700; text-align: center;">My Learning</h1>
+	<h4 style="color:black;text-align:center";>Track your progress with our free "My Learnig" program.</h4>
+	<h4 style="color:black;text-align:center";>Log in to your account, and start earning points!</h4>
+	<img src="myl-green-off.png" alt="myl-green-off" style="width:900px;height: 400px;"><br>
+	<button class="button" style="background-color:#04AA6D; color: white;">Sign Up for Free</button>
+</div>
+<div style="background-color: black; padding-bottom: 100px;">
+	<div style="text-align: center;">
+	<h1 class="be">Become a PRO User</h1>
+	<h3 style="color:#FFC0C7;">And unlock powerful features:</h3>
+	</div>
+	<br>
+	<div>
+	<h3 style="color:white; margin-left: 500px;"><img src="tick.svg" alt="tick">    Browse W3Schools without ads</h3>
+	<h3 style="color:white; margin-left: 500px"><img src="tick.svg" alt="tick">    Website hosting (Includes <a href="https://www.w3schools.com/spaces/index.php" style="color: white;">Spaces</a> PRO</h3>
+	<h3 style="color:white; margin-left: 500px"><img src="tick.svg" alt="tick">    Access to our <a href="https://www.w3schools.com/videos/index.php" style="color: white;">HTML Video Tutorial</a></h3>
+	<div style="text-align: center;">
+			<br>
+	<button class="button" style="background-color:#04AA6D;">Learn More</button></div>		
+</div>
+</div>
+<div style="text-align: center; padding-bottom: 100px ;">
+	<h1 class="be" style="color: black;">Color Picker</h1>
+	<h3>W3Schools' famous color picker:</h3>
+	<a href="https://www.w3schools.com/colors/colors_picker.asp"><img src="colorpicker.png" alt="colorpicker"></a>
+</div>
+<div style="background-color:#96D4D4; padding-top: 50px; padding-bottom: 50px; text-align: center;">
+	<h1 style="font-size: 48px;">Code Game</h1>
+	<h2>Help the Lynx collect pine cones!</h2>
+	<a href="https://www.w3schools.com/codegame/index.html"><img src="w3lynx_200.png" alt="w3lynx_200" style="padding-bottom: 15px;"></a><br>
+	<button class="button" style="background-color: #282A35;">Play Game</button>
+</div>
+<div style="background-color: #282A35; text-align: center;color: white; padding-top: 50px; padding-bottom:70px">
+	<h2 style="font-size: 50px; font-weight: 700;">Exercises and Quizzes</h2>
+	<h4 style="font-weight: 400;font-size: 20px; ">Test your skils!</h4>
+	<button class="button6"  style="text-align;background-color: #04AA6D; color: white;">Exercises</button>
+	<a href="https://www.w3schools.com/exercises/index.php"><button class="button6" style="background-color: #FFF4A3; color: black;">Quizzes</button></a>
+</div>
+<div style="text-align: center; padding-top: 50px; padding-bottom: 70px;">
+	<h1 style="color: black; font-size: 60px;font-weight: 700;">Web Templates</h1>
+	<h4>Browse our selection of free responsive HTML Templates</h4><br>
+	<a href="https://www.w3schools.com/w3css/w3css_templates.asp"><img src="browse.jpg" alt="browse" style="width:800px;height: 350px; padding-bottom: 40px;"></a><br>
+	<button class="button" style="background-color: #282A35;">Browse Templates</button>
+</div>
+<div style="background-color: black; padding-top: 50px; padding-bottom: 70px">
+	<h2 style="color: lightpink; font-size: 50px; margin-left: 100px;">Kickstart your career</h2>
+	
+	<h2 style="color: lightpink; font-size: 40px; margin-left: 100px">Get certified by completing a course</h2>
+	<button class="button" style="background-color: #04AA6D; margin-left: 100px;">Get Started</button>
+</div>
+<div style="background-color: white; padding-top: 50px; padding-bottom: 70px; text-align: center;">
+	<h1 style="font-size: 50px">How To Section</h1>
+	<h4>Code snippets for HTML, CSS and JavaScript</h4>
+	<h5>For example,how to create a slideshow:</h5>
+	<img src="img_nature_wide.jpg" alt="img_nature_wide" style=" padding-bottom: 50px"><br>
+	<button class="button" style="background-color: #282A35;">Learn How To</button>
+</div>
+<div style="background-color: black; color: white; padding-top: 50px; text-align: center;">
+	<div>
+		<div class="logo2"><a href="https://www.w3schools.com/"><img src="w3 logo.png" alt="w3 logo" width="100" height="148"></a> </div>
+		<div style="color: #FFF4A3;">
+		<a href="https://www.w3schools.com/spaces/index.php" style="color: #FFF4A3;">SPACES</a></div><br>
+		<div><a href="https://www.w3schools.com/pro/index.php" style="color: #FFF4A3;">UPGRADE</a></div><br>
+		<div><a href="https://campus.w3schools.com/pages/newsletter" style="color: #FFF4A3;">NEWSLETTER</a></div><br>
+		<div><a href="https://campus.w3schools.com/collections/certifications" style="color: #FFF4A3;">GET CERTIFIED</a></div><br>
+		<div><a href="javascript:void(0);" style="color: #FFF4A3;">REPORT ERROR</a></div><br>
+	</div>
+	<div style="font-size: 13px; color: white; font-weight: 500;display: inline-flex;padding: 20px;">
+		<div>
+			<h2>Top Tutorials</h2>
+			<a href="https://www.w3schools.com/html/default.asp" style="text-decoration: none;color: white;">HTML Tutorial</a><br>
+			<a href="https://www.w3schools.com/css/default.asp" style="text-decoration: none;color: white;">CSS Tutorial</a><br>
+			<a href="https://www.w3schools.com/js/default.asp" style="text-decoration: none;color: white;color: white;color: white;color: white;">JavaScript Tutorial</a><br>
+			<a href="https://www.w3schools.com/howto/default.asp"style="text-decoration: none;color: white;color: white;color: white;">How To Tutorial</a><br>
+			<a href="https://www.w3schools.com/sql/default.asp" style="text-decoration: none;color: white;color: white;color: white;">SQL Tutorial</a><br>
+			<a href="https://www.w3schools.com/python/default.asp" style="text-decoration: none;color: white;color: white;">Python Tutoria</a><br>
+			<a href="https://www.w3schools.com/w3css/default.asp" style="text-decoration: none;color: white;">W3.CSS Tutorial</a><br>
+			<a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp" style="text-decoration: none;color: white;">Bootstrap Tutoria</a><br>
+			<a href="https://www.w3schools.com/php/default.asp" style="text-decoration: none;color: white">PHP Tutorial</a><br>
+			<a href="https://www.w3schools.com/java/default.asp" style="text-decoration: none;color: white;">Java Tutorial</a><br>
+			<a href="https://www.w3schools.com/cpp/default.asp" style="text-decoration: none;color: white;">C++ Tutorial</a><br>
+			<a href="https://www.w3schools.com/jquery/default.asp" style="text-decoration: none;color: white;">jQuery Tutorial</a><br>
+		</div>
+		<div>
+			<h2>Top References</h2>
+			<a href="https://www.w3schools.com/tags/default.asp" style="text-decoration: none;color: white;">HTML Reference</a><br>
+			<a href="https://www.w3schools.com/cssref/index.php" style="text-decoration: none;color: white;">CSS Reference</a><br>
+			<a href="https://www.w3schools.com/jsref/default.asp" style="text-decoration: none;color: white;">JavaScript Reference</a><br>
+			<a href="https://www.w3schools.com/sql/sql_ref_keywords.asp" style="text-decoration: none;color: white;">SQL Reference</a><br>
+			<a href="https://www.w3schools.com/python/python_reference.asp" style="text-decoration: none;color: white;">Python Reference</a><br>
+			<a href="https://www.w3schools.com/w3css/w3css_references.asp" style="text-decoration: none;color: white;">W3.CSS Reference</a><br>
+			<a href="https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp" style="text-decoration: none;color: white;">Bootstrap Reference</a><br>
+			<a href="https://www.w3schools.com/php/php_ref_overview.asp" style="text-decoration: none;color: white;">PHP Reference</a><br>
+			<a href="https://www.w3schools.com/colors/colors_names.asp" style="text-decoration: none;color: white;">HTML Colors</a><br>
+			<a href="https://www.w3schools.com/java/java_ref_keywords.asp" style="text-decoration: none;color: white;color: white;">Java Reference</a><br>
+			<a href="https://www.w3schools.com/angular/angular_ref_directives.asp" style="text-decoration: none;color: white;">Angular Reference</a><br>
+			<a href="https://www.w3schools.com/jquery/jquery_ref_overview.asp" style="text-decoration: none;color: white;">jQuery Reference</a><br>
+		</div>
+		<div>
+			<h2>Top Examples</h2>
+			<a href="https://www.w3schools.com/html/html_examples.asp" style="text-decoration: none;color: white;">HTML Examples</a><br>
+			<a href="https://www.w3schools.com/css/css_examples.asp" style="text-decoration: none;color: white;">CSS Examples</a><br>
+			<a href="https://www.w3schools.com/js/js_examples.asp" style="text-decoration: none;color: white;">JavaScript Examples</a><br>
+			<a href="https://www.w3schools.com/howto/default.asp" style="text-decoration: none;color: white;">How To Examples</a><br>
+			<a href="https://www.w3schools.com/sql/sql_examples.asp" style="text-decoration: none;color: white;">SQL Examples</a><br>
+			<a href="https://www.w3schools.com/python/python_examples.asp" style="text-decoration: none;color: white;">Python Examples</a><br>
+			<a href="https://www.w3schools.com/w3css/w3css_examples.asp" style="text-decoration: none;color: white;">W3.CSS Examples</a><br>
+			<a href="https://www.w3schools.com/bootstrap/bootstrap_examples.asp" style="text-decoration: none;color: white;">Bootstrap Examples</a><br>
+			<a href="https://www.w3schools.com/php/php_examples.asp" style="text-decoration: none;color: white;">PHP Examples</a><br>
+			<a href="https://www.w3schools.com/java/java_examples.asp" style="text-decoration: none;color: white;">Java Examples</a><br>
+			<a href="https://www.w3schools.com/xml/xml_examples.asp" style="text-decoration: none;color: white;">XML Examples</a><br>
+			<a href="https://www.w3schools.com/jquery/jquery_examples.asp" style="text-decoration: none;color: white;">jQuery Examples</a><br>
+		</div>
+		<div style="padding-bottom: 50px;">
+			<h2>Get Certified</h2>
+			<a href="https://campus.w3schools.com/collections/certifications/products/html-certificate" style="text-decoration: none;color: white;">HTML Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/css-certificate" style="text-decoration: none;color: white;">CSS Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/javascript-certificate" style="text-decoration: none;color: white;">JavaScript Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/front-end-certificate" style="text-decoration: none;color: white;">Front End Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/sql-certificate" style="text-decoration: none;color: white;">SQL Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/python-certificate" style="text-decoration: none;color: white;">Python Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/php-certificate" style="text-decoration: none;color: white;">PHP Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/jquery-certificate" style="text-decoration: none;color: white;">jQuery Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/java-certificate" style="text-decoration: none;color: white;">Java Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/c-certificate" style="text-decoration: none;color: white;">C++ Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/c-certificate-1" style="text-decoration: none;color: white;">C# Certificate</a><br>
+			<a href="https://campus.w3schools.com/collections/certifications/products/xml-certificate" style="text-decoration: none;color: white;">XML Certificate</a><br>
+			<br>
+		</div>
+	
+</div>
+	<div>
+	<i class="fa"></i>
+	<i class="fa"></i>
+	<i class="fa"></i>
+	<i class="fa"></i>
+	<a href="https://www.w3schools.com/forum/default.asp" style="color: white;">FORUM</a>
+	<a href="https://www.w3schools.com/about/default.asp"></a>
+	<h6>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our <a href="https://www.w3schools.com/about/about_copyright.asp" style="color: white;"> terms of use</a>, <a href="https://www.w3schools.com/about/about_privacy.asp"  style="color: white;"> cookie and privacy policy.</a></h6>
+	<h6><a href="https://www.w3schools.com/about/about_copyright.asp"  style="color: white;">Copyright 1999-2023</a> by Refsnes Data. All Rights Reserved. <a href="https://www.w3schools.com/w3css/default.asp" style="color: white;">W3Schools is Powered by W3.CSS.</a></h6>
+
+</div>-->
+</body>
+</html>
